@@ -285,7 +285,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           buttonSize: ButtonSize.small,
                           buttonType: ButtonType.google,
                           onPressed: () {},
-                          width: 180,
+                          width: 190,
                         ),
                         const SizedBox(
                           height: 20,
@@ -301,10 +301,4 @@ class _SignUpScreenState extends State<SignUpScreen> {
       ),
     );
   }
-}
-
-void fieldFocusChange(
-    BuildContext context, FocusNode currentFocus, FocusNode nextFocus) {
-  currentFocus.unfocus();
-  FocusScope.of(context).requestFocus(nextFocus);
 }
