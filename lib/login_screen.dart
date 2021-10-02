@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 import 'signup_screen.dart';
 
+void main() {
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((_) {
+    runApp(const SignInScreen());
+  });
+}
+
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
 
@@ -15,6 +22,7 @@ class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: Scaffold(
       backgroundColor: Colors.blue,
       body: SingleChildScrollView(
